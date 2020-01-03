@@ -21,13 +21,13 @@ function christmasTree(height) {
         }
         res[i] = res[i].join(``);
     }
-
+    console.log(res.join(`\n`));
     return res.join(`\n`);
 }
 
 
 
-christmasTree(4);
+christmasTree(3);
 
 /*
     https://www.codewars.com/kata/christmas-tree/javascript
