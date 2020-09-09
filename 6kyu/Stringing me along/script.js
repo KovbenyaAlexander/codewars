@@ -1,9 +1,6 @@
 function createMessage(a) {
-
     let sum = `${a} `;
-
     return function count(b) {
-
         if (b) {
             sum += `${b} `;
             return count;
@@ -12,7 +9,6 @@ function createMessage(a) {
         }
 
     };
-
 }
 
 console.log(
