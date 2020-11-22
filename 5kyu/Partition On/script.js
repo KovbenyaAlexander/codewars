@@ -1,20 +1,10 @@
 function partitionOn(pred, items) {
-    let res = []
+    const falseArray = items.filter(item => pred(item) === false);
+    const trueArray = items.filter(item => pred(item) === true);
 
-    items.forEach(item => {
-        res.push(pred(item))
-    });
+    items.length = 0;
+    items.push(...falseArray);
+    items.push(...trueArray);
 
-    console.log(res);
-
-
+    return falseArray.length;
 }
-
-
-
-let items = [1, 2, 3, 4, 5, 6];
-function isEven(n) { return n % 2 == 0 }
-
-
-let i = partitionOn(isEven, items);
-console.log(i);
