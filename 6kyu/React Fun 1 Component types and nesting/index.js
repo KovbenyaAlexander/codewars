@@ -8,7 +8,7 @@ const World = () => {
   return <h2>World!</h2>;
 };
 
-class Greet {
+class Greet extends React.Component {
   render() {
     return (
       <div>
